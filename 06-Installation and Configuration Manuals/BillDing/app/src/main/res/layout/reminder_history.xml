@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><!---Custom Listview Format-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/reminder_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+     <!---Reminder Name-->
+     <!---alignParentTop prevents the overlapping-->
+     <!---layout_width should probably be changed in the future if we want prettier UI for devices with big screens-->
+
+     <!---Reminder Amount-->
+
+     <!---Reminder Due Date-->
+     <!---layout_height is fixed for better alignment-->
+     <TextView
+         android:id="@+id/reminderDate"
+         android:layout_width="112dp"
+         android:layout_height="60dp"
+         android:layout_gravity="end"
+         android:padding="10sp"
+         android:textSize="14sp"
+         android:textStyle="bold"
+         android:layout_alignBottom="@+id/reminderTag"
+         android:layout_alignParentEnd="true">
+     </TextView>
+     <TextView
+         android:id="@+id/reminderPaidDate"
+         android:layout_width="112dp"
+         android:layout_height="60dp"
+         android:layout_gravity="end"
+         android:padding="10sp"
+         android:textSize="14sp"
+         android:textStyle="bold"
+         android:layout_alignBottom="@+id/reminderTag"
+         android:layout_alignParentEnd="true">
+     </TextView>
+     <TextView
+         android:id="@+id/reminderName"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="10sp"
+         android:textSize="18sp"
+         android:textStyle="bold"
+         android:layout_alignParentTop="true"
+         android:layout_toStartOf="@+id/reminderDate">
+     </TextView>
+
+     <TextView
+         android:id="@+id/reminderAmt"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="10sp"
+         android:textSize="12sp"
+         android:textStyle="bold"
+         android:layout_below="@+id/reminderName"
+         android:layout_toStartOf="@+id/reminderDate">
+     </TextView>
+</RelativeLayout>

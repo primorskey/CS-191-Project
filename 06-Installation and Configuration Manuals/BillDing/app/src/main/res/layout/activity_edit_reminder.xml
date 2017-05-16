@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_add__reminder"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="12dp"
+              android:paddingLeft="12dp"
+              android:paddingRight="12dp"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:orientation="vertical"
+              android:weightSum=".9"
+              tools:context="com.example.prim.billding.Add_Reminder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill Name "
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/asterisk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#FF3333"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/billname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16sp"
+        android:layout_marginBottom="32sp"
+        android:ems="30"
+        android:focusable="true"
+        android:hint="(e.g. Globe)"
+        android:inputType="text"
+        android:layout_weight=".1"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount Payable "
+            android:id="@+id/label2"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/asterisk2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="16sp"
+            android:textColor="#FF3333"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/billamount"
+        android:layout_weight=".1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16sp"
+        android:layout_marginBottom="32sp"
+        android:ems="30"
+        android:focusable="true"
+        android:hint="(e.g. 1234.56)"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight=".1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due Date "
+            android:id="@+id/label3"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/asteris3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="16sp"
+            android:textColor="#FF3333" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/billdue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32sp"
+        android:layout_marginTop="-16sp"
+        android:layout_weight=".1"
+        android:ems="30"
+        android:focusable="false"
+        android:hint="(e.g. 01/01/70)"
+        android:inputType="date"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight=".1"
+        android:layout_height="wrap_content"
+        android:text="Description "
+        android:id="@+id/label4"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/billdesc"
+        android:layout_weight=".1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16sp"
+        android:layout_marginBottom="32sp"
+        android:ems="30"
+        android:focusable="true"
+        android:hint="(e.g. This is my phone bill.)"
+        android:inputType="text"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight=".1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/asterisk4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#FF3333"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" = required field"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:id="@+id/buttons"
+                  android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:layout_weight="0"
+                  android:layout_marginBottom="-4dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="-16dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonstyle"
+            android:text=" Save " />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="-1dp"
+            android:layout_marginEnd="-16dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonstyle"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

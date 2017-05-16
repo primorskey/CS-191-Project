@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.prim.billding">
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/billding_ico"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="BillDing!"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Add_Reminder"
+            android:label="Add a reminder"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+
+        <activity
+            android:name=".Edit_Reminder"
+            android:label="Edit a reminder"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+
+        <activity
+            android:name=".View_Reminder"
+            android:label="View"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".ReminderHistory"
+            android:label="Payment History"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+        <activity
+            android:name=".View_ReminderPaid"
+            android:label="View"
+            android:parentActivityName=".ReminderHistory" >
+        </activity>
+        <activity
+            android:name=".SpinnerView"
+            android:label="Set Your Alarm Time"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+
+        <service android:name=".ReminderService"/>
+
+    </application>
+
+</manifest>
